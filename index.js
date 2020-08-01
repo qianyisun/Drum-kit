@@ -1,9 +1,9 @@
 
 
-// 不能直接加（），否则会直接触发如果你在addEventListener（“click”,function名字”无括号“”）
-// Detecting Button Press
+
+
 var numberofDrumButtons = document.querySelectorAll(".drum").length;
-//.drum is a class
+
 for(i = 0; i < numberofDrumButtons; i++){
   document.querySelectorAll(".drum")[i].addEventListener("click",function () {
 
@@ -15,7 +15,7 @@ for(i = 0; i < numberofDrumButtons; i++){
   });
 }
 
-// Detecting Keyboard Press
+
 document.addEventListener("keydown",function(event) {
 
   makeSound(event.key);
@@ -73,7 +73,7 @@ function makeSound(key){
 function buttonAnimation(currentKey) {
 
   var activeButton = document.querySelector("." + currentKey)
-  activeButton.classList.add("pressed");// 用了css的class到js
+  activeButton.classList.add("pressed");
   setTimeout(function(){
     activeButton.classList.remove("pressed");
   },100);
